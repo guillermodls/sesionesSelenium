@@ -25,7 +25,6 @@ public class ContactPage extends BasePage {
         Assert.assertTrue(driver.switchTo().alert().getText().contains("Thanks for the message!!"));
         driver.switchTo().alert().accept();
     }
-    //vandalismo
 }
 
 
