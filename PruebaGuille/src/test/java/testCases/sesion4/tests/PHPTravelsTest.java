@@ -54,14 +54,24 @@ public class PHPTravelsTest extends BaseTest {
     @Test
     public void contactUs() {
         landingPage.clickOnLogInButton();
-        loginPage.loginUser(VALID_EMAIL,VALID_PASSWORD);
+        loginPage.loginUser(VALID_EMAIL, VALID_PASSWORD);
         mainPage.verifySuccessfulLogin();
         mainPage.ClickOnContactButton();
-        contactPage.fillContact(VALID_EMAIL,VALID_NAME,VALID_MESSAGE);
+        contactPage.fillContact(VALID_EMAIL, VALID_NAME, VALID_MESSAGE);
         contactPage.VerifySuccessfulContact();
-
-
     }
+    @Test
+    public void aboutUs() {
+        landingPage.clickOnLogInButton();
+        loginPage.loginUser(VALID_EMAIL,VALID_PASSWORD);
+        mainPage.verifySuccessfulLogin();
+        mainPage.ClickOnAboutUs();
+        aboutUsPage.VerifyAboutUs();
+
+        }
+
+
+
 
     }
 

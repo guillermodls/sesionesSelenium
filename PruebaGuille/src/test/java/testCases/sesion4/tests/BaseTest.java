@@ -1,7 +1,6 @@
 package testCases.sesion4.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,6 +19,8 @@ public class BaseTest {
     MainPage mainPage;
     ContactPage contactPage;
 
+    AboutUsPage aboutUsPage;
+
     @BeforeMethod
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -31,6 +32,7 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         mainPage = new MainPage(driver);
         contactPage = new ContactPage(driver);
+        aboutUsPage = new AboutUsPage(driver);
     }
 
     @AfterMethod
