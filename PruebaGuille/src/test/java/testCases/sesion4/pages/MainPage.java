@@ -51,7 +51,13 @@ public class MainPage extends BasePage {
     public void ClickOnContactButton() {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.linkText("Contact"))));
         driver.findElement(By.linkText("Contact")).click();
-
     }
+
+    public void ClickOnAboutUs() {
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.partialLinkText("About us"))));
+        driver.findElement(By.partialLinkText("About us")).click();
+    }
+
+
 
 }
